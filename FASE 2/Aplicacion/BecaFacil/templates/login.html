@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background: url("{% static 'images/CITT.jpg' %}") no-repeat center center fixed;
+        }
+    </style>
+</head>
+
+<!-- templates/accounts/login.html -->
+<body>
+    <header>
+        <div class="header">
+            <a href="#" class="Logo"><img class="Foto" src="{% static 'images/Logo_DuocUC.png'%}" alt=""></a>
+
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Inicio</a>
+                {% if user.is_authenticated %}
+                <li class="nav-item align-items-center text-center px-4">
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link nav-link text-dark" style="padding: 0;">
+                            <img src="{% static 'images/logout.svg'%}" width="40" height="40" fill="currentColor" class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                            </img>Cerrar Sesión
+                        </button>
+                    </form>
+                </li>
+                {% endif %}
+            </nav>
+        </div>
+
+        <div class="Carta-Login">
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <h1>Inicio de Sesión</h1>
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Correo" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+        
+                    <button type="submit" class="btn">Iniciar Sesión</button>
+                </form>
+        </div>
+    </header>
+</body>
+</html>

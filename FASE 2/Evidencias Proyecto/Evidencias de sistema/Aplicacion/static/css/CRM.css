@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.low-score {
+    color: red;
+}
+
+.tag-bar {
+    width: 30%; /* Ajusta el tamaño según tus necesidades */
+    margin: 0 auto; /* Centra el gráfico */
+}
+
+#myChart {
+    width: 100% !important;
+    height: auto !important;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.Foto{
+    width: 200px;
+}
+
+.Logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}   
+
+
+/* Login */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Carta-CRM {
+    margin-top: 200px;
+    width: 1200px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);  
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 50px;
+}
+
+.Carta-CRM h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.Carta-CRM .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+.Carta-CRM .btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.suggestions-list li {
+    padding: 8px;
+    color: #09001d;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.Carta-CRM .btn{
+    margin-left: 10px;
+    width: 150px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600; 
+}
+
+.tag-bar2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.tag {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.tag:hover {
+    background: #f0f0f0;
+}
+
+.data-table {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    border-collapse: collapse; /* Asegura que las celdas estén alineadas */
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    vertical-align: middle; /* Alinea verticalmente al centro */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+
+.send-email-btn {
+    margin-right: 10px; /* Ajusta el margen para que el botón esté cerca del nombre */
+    width: 120px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+}
+.delete-btn {
+    margin-right: 10px; /* Ajusta el margen para que el botón esté cerca del nombre */
+    width: 100px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.low-score {
+    color: orange; /* Color de fondo para resaltar */
+}
+
+
+    
